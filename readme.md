@@ -1,9 +1,9 @@
-# FYI
-[try.github.io](https://try.github.io/levels/1/challenges/2)
+# requirements
+SQLAlchemy
 
-# key words
-1. repo
-2. commit
-3. branch
-4. merge
-5. conflict
+# FYI
+[SQLAlchemy](http://docs.sqlalchemy.org/en/latest/)
+
+# commands
+1. mysql -u root -p
+2. create database testdb;
