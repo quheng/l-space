@@ -1,12 +1,9 @@
-from flask import Flask
-from flask import request
-from flask import jsonify
-
 # init database
 from .db import init_db, db_session
+from .models import User
 init_db()
 
-u = User('admin', 'admin@localhost')
+u = User('admin2', 'admin2@localhost')
 db_session.add(u)
 db_session.commit()
 
