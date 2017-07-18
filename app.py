@@ -1,24 +1,26 @@
 from flask import Flask
-from flask import request
 from flask import jsonify
-
-# init database
-from .db import init_db
-init_db()
-
+from flask import request
 app = Flask(__name__)
 
-@app.route("/id/<id>")
-def variable(id=None):
-    return jsonify(users.select(users.c.id == 1).execute().first())
+# init database
+from .db import init_db, db_session
+from .models import User
+init_db()
 
-# key-value
-@app.route("/key-value")
-def key_value():
-    return jsonify(request.args)
+@app.route("/user/<name>")
+def user(name=None):
+    result = User.query.filter(User.name == name).first()
+    return jsonify({
+        'name': result.name,
+        'email': result.email})
 
-# form-data can not use in GET method
-@app.route('/form-data', methods=['POST'])  #default methods is GET
-def form_data():
-    return jsonify(request.form)
+@app.route('/user', methods=['PUT'])
+def create_user():
+    u = User(request.form['name'], request.form['email'])
+    db_session.add(u)
+    db_session.commit()
+    # todo error handling
+    return 'succ'
 
+# todo list all user

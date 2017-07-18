@@ -1,8 +1,12 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
+import os
 
-DB_CON_STR = 'mysql+mysqldb://root:test@localhost/testdb?charset=utf8'  
+DB_USER = os.environ.get('DB_USER')
+DB_PW= os.environ.get('DB_PW')
+
+DB_CON_STR = f'mysql+mysqldb://{DB_USER}:{DB_PW}@localhost/testdb?charset=utf8'
 
 engine = create_engine(DB_CON_STR, convert_unicode=True)
 
