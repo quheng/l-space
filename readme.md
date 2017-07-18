@@ -5,7 +5,7 @@
 
 # FYI
 
-(flask)[http://flask.pocoo.org]
+[flask](http://flask.pocoo.org)
 
 # command
 
