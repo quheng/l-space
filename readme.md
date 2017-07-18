@@ -1,14 +1,9 @@
-# requirement 
-
-1. python 3.6.0
-2. flask 0.12.2
-
 # FYI
+[try.github.io](https://try.github.io/levels/1/challenges/2)
 
-(flask)[http://flask.pocoo.org]
-
-# command
-
-```
-FLASK_APP=app.py flask run
-```
+# key words
+1. repo
+2. commit
+3. branch
+4. merge
+5. conflict
