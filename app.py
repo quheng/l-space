@@ -3,27 +3,12 @@ from flask import request
 from flask import jsonify
 
 # init database
-from .db import init_db
+from .db import init_db, db_session
 init_db()
 
-app = Flask(__name__)
+u = User('admin', 'admin@localhost')
+db_session.add(u)
+db_session.commit()
 
-@app.route("/")
-def hello():
-    return "Hello World!"
-
-# variable
-@app.route("/id/<id>")
-def variable(id=None):
-    return id
-
-# key-value
-@app.route("/key-value")
-def key_value():
-    return jsonify(request.args)
-
-# form-data can not use in GET method
-@app.route('/form-data', methods=['POST'])  #default methods is GET
-def form_data():
-    return jsonify(request.form)
-
+print(User.query.all())
+print(User.query.filter(User.name == 'admin').first())
