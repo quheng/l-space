@@ -1,14 +1,8 @@
-# requirement 
-
-1. python 3.6.0
-2. flask 0.12.2
+# useful tool
+[postman](https://www.getpostman.com)
 
 # FYI
 
-[flask](http://flask.pocoo.org)
-
-# command
-
-```
-FLASK_APP=app.py flask run
-```
+[HTTP Tutorial](https://www.tutorialspoint.com/http/index.htm)
+[http](http://www.ruanyifeng.com/blog/2016/08/http.html)
+[RESTful API](https://zhuanlan.zhihu.com/p/25647039)
