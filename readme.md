@@ -1,5 +1,5 @@
 # FYI
-[try.github.io](https://try.github.io/levels/1/challenges/2)
+[try.github.io](https://try.github.io/levels/1/challenges/1)
 
 # key words
 1. repo
